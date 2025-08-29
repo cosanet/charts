@@ -1,0 +1,16 @@
+apiVersion: v2
+name: cosanet
+description: Deploy cosanet with appropriate service account and read permissions
+
+home: https://github.com/cosanet
+sources:
+  - https://github.com/cosanet/cosanet
+  - https://github.com/cosanet/charts
+icon: https://raw.githubusercontent.com/cosanet/cosanet/master/logo/cosanet_logo.svg
+
+type: application
+
+version: 0.1.0
+
+# Cosanet version
+appVersion: "0.1.0"

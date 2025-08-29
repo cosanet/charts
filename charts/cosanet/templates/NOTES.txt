@@ -1,0 +1,4 @@
+Cosanet v{{ .Values.image.tag | default .Chart.AppVersion }} will be deployed shortly.
+Metrics will be available in your Prometheus-compatible stack if you have a Service Discovery configured to automatically scrape pods with annotations.
+
+Individual metrics endpoints can be accessed at :9156/metrics

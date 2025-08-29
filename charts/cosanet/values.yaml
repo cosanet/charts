@@ -1,0 +1,61 @@
+# This sets the container image more information can be found here: https://kubernetes.io/docs/concepts/containers/images/
+image:
+  repository: ghcr.io/cosanet/cosanet
+  # This sets the pull policy for images.
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: ""
+
+# This is for the secrets for pulling an image from a private repository more information can be found here: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
+imagePullSecrets: []
+# This is to override the chart name.
+nameOverride: ""
+fullnameOverride: ""
+
+# CRI Socket path on host
+criSocketPath: /var/run/containerd/containerd.sock
+
+# For more informations about command args
+# see: https://github.com/cosanet/cosanet#arguments
+cosanetCommandArgs: []
+
+# This section builds out the service account more information can be found here: https://kubernetes.io/docs/concepts/security/service-accounts/
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: true
+  # Annotations to add to the service account
+  annotations: {}
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name: ""
+
+# This is for setting Kubernetes Annotations to a Pod.
+# For more information checkout: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/
+podAnnotations:
+  prometheus.io/scrape: 'true'
+  prometheus.io/port: '9156'
+podLabels: {}
+
+resources:
+  requests:
+    cpu: 10m
+    memory: 50Mi
+
+livenessProbe:
+  httpGet:
+    path: /
+    port: metrics
+readinessProbe:
+  httpGet:
+    path: /
+    port: metrics
+
+tolerations:
+  - operator: Exists
+    effect: NoSchedule
+  - operator: Exists
+    effect: NoExecute
+  - operator: Exists
+
+
+affinity: {}

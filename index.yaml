@@ -2,6 +2,21 @@ apiVersion: v1
 entries:
   cosanet:
   - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-08-31T00:46:11.803187618Z"
+    description: Deploy cosanet with appropriate service account and read permissions
+    digest: 84b4399a7ec8367157641075ef4be3f4ea63df9e6851c743791c866c73665fa2
+    home: https://github.com/cosanet
+    icon: https://raw.githubusercontent.com/cosanet/cosanet/master/logo/cosanet_logo.svg
+    name: cosanet
+    sources:
+    - https://github.com/cosanet/cosanet
+    - https://github.com/cosanet/charts
+    type: application
+    urls:
+    - cosanet-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v2
     appVersion: 0.1.0
     created: "2025-08-29T01:30:34.297305324Z"
     description: Deploy cosanet with appropriate service account and read permissions
@@ -16,4 +31,4 @@ entries:
     urls:
     - cosanet-0.1.0.tgz
     version: 0.1.0
-generated: "2025-08-29T01:30:34.297310985Z"
+generated: "2025-08-31T00:46:11.803201955Z"

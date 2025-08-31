@@ -2,7 +2,7 @@
 
 This repository contains the Helm chart for deploying Cosanet on Kubernetes.
 
-- [cosanet project](https://github.com/cosanet/cosanet)
+<p align="center"><a href="https://github.com/cosanet/cosanet" rel="cosanet"><img src="https://raw.githubusercontent.com/cosanet/cosanet/master/logo/cosanet_logo_256.png" alt="Cosanet Logo" width="256"></a></p>
 
 ## Usage
 
